@@ -1,0 +1,51 @@
+process blank and white images
+check if the 256*256 conversion is a deformation or a crop, should be a crop
+make the reste work
+
+
+
+make a validation Dataset
+compute SAMPLES_COUNT
+restore data augmentation
+
+
+check that validation DS is resized
+
+--
+
+23/10/2016
+put a final test using TRAINING_SET_RATIO
+
+weight decay
+relu not leaky and he
+first layer reduces conv
+320 should be 256
+
+make a random search in learning rate (log space) to find the best over the first epochs
+track weight update ratio to weight value, should be close to 1e-3
+track activation mean and variance accross layers
+
+decide to add leanable batch noralization
+
+add trace + control images + batch normalization -> accuracy 0
+remove batch : still 0
+remove trace : not 0
+batch and trace removed -> accuracy again not 0
+trace is too slow, stats should be done via sampling
+
+labels ok check number of different should be 1000
+augmentation should be in a separate thread
+
+DONE : split train and test data
+DONE : show val and test images to check their validity
+
+TODO : randomize archive read, we have only a few synsets per batch
+
+TODO : compute or display accuracy
+TODO : show some random predictions
+TODO : kill python child processes
+TODO : test augmentation
+
+image data is in caffee/data/imagenet
+
+
